@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="budgetViewModel"
+            type="br.gbizotto.parkingsaver.budget.viewModel.BudgetViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="br.gbizotto.parkingsaver.budget.view.BudgetActivity">
+
+        <TextView
+            android:id="@+id/txt_budget_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/min_value_question"
+            style="@style/budget_question"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/edt_budget_answer"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edt_budget_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/budget_answer">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@={budgetViewModel.budget}"
+                android:hint="R$"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/start_purchases"
+            style="@style/button_style"
+            android:onClick="@{() -> budgetViewModel.onNextClick()}" />
+
+    </RelativeLayout>
+</layout>

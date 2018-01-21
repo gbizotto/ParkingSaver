@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ParkingSaver</string>
+
+    <!-- Budget screen -->
+    <string name="min_value_question">Qual é o valor mínimo que você quer gastar?</string>
+    <string name="start_purchases">Começar as compras!</string>
+
+</resources>
