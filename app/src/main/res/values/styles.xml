@@ -14,6 +14,7 @@
         <item name="android:textColor">@color/icons</item>
         <item name="android:textSize">@dimen/button_text_size</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:paddingEnd">@dimen/button_padding_end</item>
     </style>
 
     <!-- Budget screen-->

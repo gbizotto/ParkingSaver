@@ -1,5 +1,6 @@
 package br.gbizotto.parkingsaver.budget.view;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import br.gbizotto.parkingsaver.budget.BudgetCommunication;
 import br.gbizotto.parkingsaver.budget.viewModel.BudgetViewModel;
 import br.gbizotto.parkingsaver.databinding.ActivityBudgetBinding;
 import br.gbizotto.parkingsaver.model.Budget;
+import br.gbizotto.parkingsaver.purchases.view.PurchasesActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -41,7 +43,7 @@ public class BudgetActivity extends AppCompatActivity implements BudgetCommunica
 
     @Override
     public void goToNext() {
-        Log.d(BudgetActivity.class.getSimpleName(), "Vai para a próxima!");
+        startActivity(new Intent(this, PurchasesActivity.class));
     }
 
     @Override
