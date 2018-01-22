@@ -12,11 +12,39 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/txt_name"
-            android:layout_width="match_parent"
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="lalalalal"/>
+            android:layout_weight="2"
+            android:layout_centerInParent="true"
+            style="@style/budget_answer">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@={budgetViewModel.budget}"
+                android:inputType="numberDecimal"
+                android:hint="@string/product"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_centerInParent="true"
+            style="@style/budget_answer">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@={budgetViewModel.budget}"
+                android:inputType="numberDecimal"
+                android:hint="@string/price"/>
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
 </layout>

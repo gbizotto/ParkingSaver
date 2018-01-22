@@ -47,6 +47,10 @@ public class PurchaseAdapter extends RecyclerView.Adapter<PurchaseAdapter.ViewHo
         return products.size();
     }
 
+    public void setProducts(List<ProductViewModel> products) {
+        this.products = products;
+    }
+
     static class ViewHolder extends RecyclerView.ViewHolder {
         private ProductRowBinding mBinding;
 

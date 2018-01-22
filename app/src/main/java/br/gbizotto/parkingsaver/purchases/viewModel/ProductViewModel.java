@@ -2,6 +2,8 @@ package br.gbizotto.parkingsaver.purchases.viewModel;
 
 import android.databinding.BaseObservable;
 
+import br.gbizotto.parkingsaver.model.Product;
+
 /**
  * Created by Gabriela on 21/01/2018.
  */
@@ -12,6 +14,13 @@ public class ProductViewModel extends BaseObservable {
     private String name;
     private Boolean bought;
     private String price;
+
+    public ProductViewModel(Product product) {
+        this.id = product.getId();
+        this.name = product.getName();
+        this.bought = product.getBought();
+        this.price = product.getPrice().toString();
+    }
 
     public int getId() {
         return id;

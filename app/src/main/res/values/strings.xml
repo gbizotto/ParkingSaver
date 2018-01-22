@@ -7,6 +7,8 @@
 
     <!-- Purchases screen-->
     <string name="add_item">Adicionar produto</string>
+    <string name="product">Produto</string>
+    <string name="price">Preço</string>
 
     <!-- Shared preferences -->
     <string name="budget_key" translatable="false">budget_key</string>
